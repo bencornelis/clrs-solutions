@@ -1,0 +1,20 @@
+Correctness of bubblesort
+a. you would need to show that A' is actually a permutation of A
+b. loop invariant A[j] is the smallest element in A[j..n]
+  Initialization: j = n
+   A[n..n] is one element
+  Maintenance: suppose A[j] is the smallest element in A[j..n]
+  if A[j] is smaller than A[j-1] we swap them, so that A[j-1..n] has the smallest at j-1
+  Termination: At j = i, A[i...n] has smallest element at the beginning
+
+c. loop invariant A[1..i-1] consists of the i-1 smallest elements in A sorted
+ Initialization: i = 1 trivially
+ Maintenance: suppose A[1..i-1] is i-1 smallest, sorted
+  After completion of inner for loop, A[i] is the smallest element in A[i..n]
+  therefor A[1..i] is the smallest, sorted
+ Termination: when loop terminates, i = n, so A[1..n] is sorted
+
+d. worst case running time occurs when elements are in reverse sorted order
+   for the first iteration of the loop there are n-1 comparisons/swaps, then n-2,
+   ... down to 1 swap
+   1 + ... + (n-2) + (n-1) = (n-1)(n-2)/2 so the worst case running time is O(n^2)

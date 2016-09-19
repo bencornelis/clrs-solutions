@@ -1,0 +1,31 @@
+Binary Search
+Input: Sorted array A, value v, index r of start, index s of stop
+Output: Index of v in A or null if v is not an element of A
+
+Recursive:
+
+BinarySearch(A, v, r, s)
+  if r > s
+    return null
+  else
+    m = r + (s-r)/2
+    if v == A[m]
+      return m
+    else if v > A[m]
+      return BinarySearch(A, v, m + 1, s)
+    else
+      return BinarySearch(A, v, r, m - 1)
+
+Iterative:
+
+BinarySearch(A, v)
+  r, s = 0, A.length - 1
+  while r <= s
+    m = r + (s - r)/2
+    if v == A[m]
+      return m
+    else if v > A[m]
+      r = m + 1
+    else
+      s = m - 1
+  return null

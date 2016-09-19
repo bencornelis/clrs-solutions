@@ -1,0 +1,19 @@
+Pseudocode
+
+PrintTree(root)
+  node = root
+
+  repeat
+    print node.key
+
+    if node.left is not NULL
+      node = node.left
+    else if node.right is not NULL
+      node = node.right
+    else // backtrack and choose first right child
+      while node.p and (node.p.right == node or node.p.right is NULL)
+        node = node.p
+
+      if node == root
+          return
+      node = node.p.right
