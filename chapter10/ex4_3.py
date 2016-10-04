@@ -1,4 +1,4 @@
-from binary_tree import *
+from tree_node import *
 from stack import *
 
 # Write an O(n)-time nonrecursive procedure that, given an n-node binary tree,

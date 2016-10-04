@@ -1,4 +1,4 @@
-from binary_tree import *
+from tree_node import *
 
 def construct_tree(keys):
     """

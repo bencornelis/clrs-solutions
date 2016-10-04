@@ -1,4 +1,4 @@
-from binary_tree import *
+from tree_node import *
 
 # Write an O(n)-time recursive procedure that, given an n-node binary tree, prints
 # out the key of each node in the tree.
@@ -22,10 +22,10 @@ def print_tree(root):
     3
 
     """
-    if root is not None:
-        print(root.key)
-        print_tree(root.left)
-        print_tree(root.right)
+    if root is None: return
+    print(root.key)
+    print_tree(root.left)
+    print_tree(root.right)
 
 if __name__ == "__main__":
     import doctest

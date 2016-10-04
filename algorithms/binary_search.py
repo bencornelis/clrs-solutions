@@ -50,7 +50,7 @@ def iterative_binary_search(items, v):
     """
     r, s = 0, len(items) - 1
     while r <= s:
-        m = s + (r - s)/2
+        m = r + (s - r)/2
         if v == items[m]:
             return m
         elif v > items[m]:
